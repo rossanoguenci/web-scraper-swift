@@ -16,7 +16,7 @@ The project needs [ZipFoundation](https://github.com/weichsel/ZIPFoundation) as 
 
 Build and run the project, it will ask to set a range of numbers on console. 
 
-It will create a new folder ***web-image-sms*** in your Download folder and it will save downloaded files in thousandth subfolders.
+It will create a new folder ***```web-image-sms```*** in your Download folder and it will save downloaded files in thousandth subfolders.
 
 It filters already audio files, gifs, xml and it deletes files lower than 23 kb (90% chance of drawings..)
 
