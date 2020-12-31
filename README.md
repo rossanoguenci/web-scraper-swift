@@ -22,7 +22,7 @@ It filters already audio files, gifs, xml and it deletes files lower than 23 kb 
 
 ## Customisation 
 
-In ***main.swift***, you can customise the settings array
+In ***```main.swift```***, you can customise the settings array
 
 ```swift
 
