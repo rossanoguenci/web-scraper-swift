@@ -206,7 +206,16 @@ class Scraper {
             output[order[index]] = String(subString)
         }
         
-        output["ext"] = output["compressName"]!.components(separatedBy: ".")[1]
+        //output["ext"] = output["compressName"]!.components(separatedBy: ".")[1] //bug
+        
+        let pathExtension = URL(string: output["compressName"]!)?.pathExtension
+        
+        if pathExtension != nil {
+            output["ext"] = pathExtension
+        }else{
+            return [:] // not an identifiable file
+        }
+
         
         return output
     }

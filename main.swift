@@ -1,3 +1,11 @@
+//
+//  main.swift
+//  web-scraper-swift
+//
+//  Created by Rox
+//
+
+
 import IOKit.pwr_mgt
 
 var noSleepAssertionID: IOPMAssertionID = 0
@@ -19,8 +27,7 @@ func  enableScreenSleep() -> Bool {
     return false
 }
 
-disableScreenSleep()
-
+disableScreenSleep() //Preventing display sleeping on running
 
 
 //start
@@ -49,16 +56,19 @@ var scraper = Scraper(settings: settings)
 
 var range = [
     "start": 0,
-    "end": 0
+    "end": 0,
+    "increament": 0
 ]
 
 print("Type START range: ")
 range["start"] = Int(readLine()!) ?? 0
 
-print("Type END range: ")
-range["end"] = Int(readLine()!) ?? 0
+print("\nType INCREMENT: ")
+range["increament"] = Int(readLine()!) ?? 0
 
-print("All set...now let's go scraping...\n")
+range["end"] = range["start"]! + range["increament"]!
+
+print("\nAll set...now let's go scraping...\n")
 
 for n in range["start"]!...range["end"]!{
     let nHEX = String(format:"%02X", n)
@@ -68,4 +78,6 @@ for n in range["start"]!...range["end"]!{
 
 }
 
-print("Finished for the range set")
+print("\nFinished for the range set, from \(String(describing: range["start"]!)) to \(String(describing: range["end"]!)), increased by \(String(describing: range["increament"]!)).")
+
+print("\n\n Bye bye! \n\n")
